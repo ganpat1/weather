@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap");
+.container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.main {
+  position: relative;
+  height: 80vh;
+  background-color: rgb(191, 203, 212);
+  width: 25%;
+  border: 0.5px solid black;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+
+border-radius: 15px;
+}
+
+.name {
+  height: 40%;
+  /* background-color: rgb(51, 86, 117); */
+  width: 100%;
+  
+}
+
+.heading {
+  position: absolute;
+  top: 1%;
+  left: 15%;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.search {
+  position: absolute;
+  height: 1.8rem;
+  width: 15.2em;
+  top: 15%;
+  left: 17%;
+  padding-left: 15px;
+  text-transform: capitalize;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+
+.temp {
+  position: absolute;
+  top: 26%;
+  left: 12%;
+}
+
+.weatherInfo {
+  height: 60%;
+  /* background-color: aliceblue; */
+  width: 100%;
+  position: relative;
+}
+
+.cityheading {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.Info {
+  position: absolute;
+  top: 18%;
+  left: 10%;
+  font-size: inherit;
+}
+
+.wind {
+  position: absolute;
+  top: 39%;
+  left: 20%;
+}
+
+.humadity {
+  position: absolute;
+  top: 39%;
+  left: 64%;
+}
+
+.maxtemp {
+  position: absolute;
+  top: 57%;
+  left: 64%;
+}
+.sunset {
+  position: absolute;
+  top: 77%;
+  left: 64%;
+}
+.mintemp {
+  position: absolute;
+  top: 57%;
+  left: 20%;
+}
+
+.presure {
+  position: absolute;
+  top: 77%;
+  left: 20%;
+}
