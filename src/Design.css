@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap");
+*{
+  background-color:  #0007;
+}
+
 .container {
   height: 100vh;
   width: 100%;
   display: grid;
   place-items: center;
+  background-color: transparent;
 }
 
 .main {
@@ -20,7 +25,7 @@ border-radius: 15px;
 
 .name {
   height: 40%;
-  /* background-color: rgb(51, 86, 117); */
+
   width: 100%;
   
 }

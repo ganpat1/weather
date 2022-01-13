@@ -1,66 +1,111 @@
-import React,{useState,useEffect} from "react";
-import "./Design.css";
-import axios from  'axios';
-const Design = () => {
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+// import a from "./icons/cloudy.svg"
 
-  const [search, setSearch] = useState('bhilwara');
-  const [city, setCity] = useState('');
-  // const [icon, setIcon] = useState('');
+// import "./D.css";
+// const Design = () => {
+//   const [search, setSearch] = useState();
+//   const [find, setFind] = useState();
+//   const [city, setCity] = useState([]);
+//   const [weather, setWeather] = useState([]);
+//   const [temperture, setTemperture] = useState([]);
 
-  useEffect(() => {
-    const fetchApi = async () => {
-      const url = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q= ${search} &units=metric &appid=e8f7bdb53874cf59dff1f1ded89c234c`); 
-      console.log(url.data);
-            setCity(url.data.main);
-            // setIcon(url.data.weather[0]);
-            console.log(url.data.weather[0]);
-     
-    }
-    fetchApi();
-  },[search]);
+//   // show time
+//   const [Time, setTime] = useState();
+
+//   const date = new Date();
+//   const months = [
+//     "Jan",
+//     "Feb",
+//     "Mar",
+//     "Apri",
+//     "May",
+//     "June",
+//     "July",
+//     "August",
+//     "September",
+//     "October",
+//     "November",
+//     "December",
+//   ];
+//   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+ 
+//   const Month = months[date.getMonth()];
+//   const curentDate = date.getDate()
+//   const curentDay = days[date.getDay()]
+//   const getyear = date.getFullYear();
+
+//   useEffect(() => {
+//     setInterval(() => setTime(new Date().toLocaleTimeString()));
+//   }, [Time]);
+
+//   // ======================================================
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const Url = await axios.get(
+//         `https://api.openweathermap.org/data/2.5/forecast?q=${find}&appid=e8f7bdb53874cf59dff1f1ded89c234c`
+//       );
+//       setCity(Url.data.city);
+//       setWeather(Url.data.list[0])
+//       console.log(Url.data.list[0]);
+//     };
+//     fetchData();
+//   }, [find]);
+
+//   return (
+//     <>
+//       <div class="container mt-3">
+//         <div className="row  ">
+//           <div className="col-12 text-center   border d-flex justify-content-center align-items-center">
+//             <input
+//               type="text "
+//               id="input"
+//               placeholder="Search for a  City..."
+//               onChange={(e) => setSearch(e.target.value)}
+//             />
+//             <button
+//               className="btn btn-primary"
+//               onClick={() => {
+//                 setFind(search);
+//               }}
+//             >
+//               <i class="fas fa-search"></i>
+//             </button>
+//           </div>
+//         </div>
+
+//         <div className="row border rounded-5 mt-2" style={{ height: "50vh" }}>
+//           <div className="col-12 " id="weather_section">
+// <h2>{city.name}</h2>
+// <h1>23° C</h1>
+//             <img src={a} alt="a" />
+// <h3>Haze</h3>
+// <h5>{curentDay} {curentDate}/{Month}/{getyear} {Time}</h5>
+// <div className="d-flex ">
+// <p className="mx-5">Wind :- </p>
+// <p  className="mx-5">Presure :- </p>
+
+// </div>
+// <div className="d-flex  ">
+// <p className="mx-5">Humedity :- </p>
+// <p  className="mx-5">Cloudilness:- </p>
+
+// </div>
 
 
-  return (
-    <>
 
 
 
-     {
-  !city?(<p>no data found</p>)
-   :
-   (
+//           </div>
+//         </div>
 
+// {/*  */}
+//         
+//       </div>
+//     </>
+//   );
+// };
 
-    <div className="container">
-        <div className="main">
-          <div className="name">
-            <h1 className="heading"> React Weather App</h1>
-            <input type="search" placeholder="enter city name" className="search"
-   onChange={(e) => setSearch(e.target.value)}         />
-           </div>
-
-          <div className="weatherInfo">
-            <h2 className="cityheading">{search}</h2>
-            <h5 className="Info">weatherInfo</h5>
-
-            <p className="wind">wind</p>
-            <p className="humadity">Humedity:- </p>
-            <p className="mintemp">Mintemp:- {city.temp_min}</p>
-            <p className="maxtemp">Maxtemp :- {city.temp_max}</p>
-            <p className="presure">Presure :-</p>
-            <p className="sunset">Sunset :- </p>
-          </div>
-        </div>
-      </div>
-
-
-   )
- }
-
-
-      
-    </>
-  );
-};
-
-export default Design;
+// export default Design;
