@@ -1,31 +1,27 @@
 import { useContext } from "react";
-import "../D.css"
+import "../D.css";
 import { context } from "./Api";
 const Searchbtn = () => {
+  const { fetchApi } = useContext(context);
 
-
-
- const {fetchApi}=  useContext(context)
-
-
- return (
+  return (
     <>
-
       <div class="container mt-3" id="search_Container">
         <div className="row  ">
-          <div className="col-12 text-center   border d-flex justify-content-center align-items-center">
-
+          <div className="col-12 rounderd-2  my-auto ">
             <form onSubmit={fetchApi}>
-            <input
-            autoComplete="off"
-              type="text "
-              id="input"
-              placeholder="Search for a  City..."
-              name='location'
-
+              <input
+                autoComplete="off"
+                type="text "
+                id="input"
+                placeholder="Search for a  City..."
+                name="location"
+                style={{
+                  background: "transparent",
+                  borderBottom: " 3px solid black",
+                }}
               />
-            <button className="btn" id="btn"><i className="fas fa-search"></i></button>
-                </form>
+            </form>
           </div>
         </div>
       </div>

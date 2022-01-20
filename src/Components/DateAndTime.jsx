@@ -31,7 +31,6 @@ const DateAndTime = () => {
   const Month = months[date.getMonth()];
   const curentDate = date.getDate();
   const curentDay = days[date.getDay()];
-  const getyear = date.getFullYear();
 
   useEffect(() => {
     setInterval(() => setTime(new Date().toLocaleTimeString()));
