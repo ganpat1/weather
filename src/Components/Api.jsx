@@ -48,10 +48,6 @@ const Api = () => {
     setIcon(response.list[0].weather[0].icon);
   };
 
-
-
-
-
   return (
     <>
       <div>
@@ -72,10 +68,10 @@ const Api = () => {
           }}
         >
           <Searchbtn />
-          {!cityName && <Error/>}
+          {!cityName && <Error />}
           {cityName && <MainComponent />}
-          
-                    {cityName && <MoreWeatherOptions />}
+
+          {cityName && <MoreWeatherOptions />}
           {cityName && <NextWeather />}
         </context.Provider>
       </div>

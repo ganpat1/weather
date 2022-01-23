@@ -78,10 +78,9 @@ const MainComponent = () => {
 
   return (
     <>
-      <div className="">
-        <div className="container  my-3  " id=" main_Contianer ">
+        <div className="container  my-3   " id=" main_Contianer ">
           <div className="row " style={ {background: '#1113' , borderRadius:' 10px' }}>
-            <div className="col-6  mt-2 "  > 
+            <div className="col-xxl-6  col-xl-6  col-lg-6  col-md-6 col-sm-12 mt-2  "  > 
               <div className="d-flex  justify-content-center align-items-center">
                 <div className="  mt-4" id="Left_side">
                   <h5 className="text-center h3 ">
@@ -105,7 +104,7 @@ const MainComponent = () => {
 
                     <div className="d-flex flex-column  mx-2">
                       <p className="m-0 h5 mt-1">minTemp </p>
-                      <p className="text-center"> {temp_min} &deg;</p>
+                      <p className="text-center"> {temp_min}&deg;</p>
                     </div>
           
                     <i
@@ -125,11 +124,11 @@ const MainComponent = () => {
               </div>
             </div>
 
-            <div className=" col-6   d-flex flex-column justify-content-center align-items-center ">
+            <div className=" col-xxl-6  col-xl- col-lg-6  col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center  ">
               <img
                 onChange={weatherIcons()}
                 src={`${IconLink}`}
-                className="mt-2 ms-5 pt-3"
+                className="mt-2 ms-5 pt-1"
                 style={{ height: "120px", width: "120px" }}
                 alt={`${altLink}`}
               />
@@ -172,7 +171,6 @@ const MainComponent = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </>

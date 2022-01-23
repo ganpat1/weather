@@ -1,23 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;1,100;1,200&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 * {
-  /* font-family: "Nunito", sans-serif;
-  font-family: "Poppins", sans-serif; */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: .5px;
-  font-weight:600;
-color: rgb(235, 136, 136);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.5px;
+  color: white;
+  font-weight: 600;
 }
 body {
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background-image: url("./Components//weatherimg/mist.jpg");
   background-position: center center;
 }
 
-
-  
-  
-  #MoreWeatherOptions{
-    border-radius: 7px;
+#MoreWeatherOptions {
+  border-radius: 7px;
 }
 
 form {
@@ -26,7 +22,7 @@ form {
   justify-content: center;
 }
 
-#input::placeholder{
+#input::placeholder {
   color: #fff;
 }
 #input {
@@ -37,28 +33,20 @@ form {
   border-radius: 5px;
   outline: none;
   border: none;
-  padding-left: 18px;
-}
-#btn {
-  border: none;
-  padding: 3px 10px;
-  border-radius: 7px;
-
-  background-color: blue;
+  padding-left: 10px;
 }
 
 #weather_section {
   background: linear-gradient(to right, #7e77b9, #2c7f9f, #827cb5);
- 
 }
 #main_Contianer {
-border-radius: 15px  !important ;
+  border-radius: 15px !important ;
   background-color: #fff1;
   display: flex;
   justify-content: flex-start;
 }
 
-#NextWeather{
+#NextWeather {
   display: flex;
   justify-content: end;
   background-color: #fff1;
@@ -88,8 +76,8 @@ border-radius: 15px  !important ;
 #tempreture {
   font-size: 5em;
   flex-grow: 1;
-display: flex;
-border: 1px solid black;
+  display: flex;
+  border: 1px solid black;
 }
 
 #Weather_icon {
@@ -118,55 +106,63 @@ border: 1px solid black;
   background: #555;
 }
 
-
-
-
 #NextWeatherTitle {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-background-color: #3339;  
+  background-color: #3339;
 }
 
-#nextWeather{
+#nextWeather {
   height: 40vh;
-overflow-y: scroll;
-border: none;
+  overflow-y: scroll;
+  border: none;
 }
-
-
 
 .accordion-button::after {
   height: 2rem !important;
 }
 .accordion-button {
-  background: #1118 !important ; 
-  padding: 0.1rem 1.25rem !important;
+  background: #1118 !important ;
+  padding: 0.1rem 1rem !important;
 }
 
-.acoordion_font_size{
+.acoordion_font_size {
   font-size: 12px;
 }
 
-.acoordion_span_font_size{
+.acoordion_span_font_size {
   font-size: 15px;
-font-weight: 600;
+  font-weight: 600;
 }
 
-
-
-
-#updown , #GrooundLevelICon , #SeaLevelIcon{
-font-size: 1.2em;
-margin-top: -3px;
-padding-right: 12px;
+#updown,
+#GrooundLevelICon,
+#SeaLevelIcon {
+  font-size: 1.2em;
+  margin-top: -3px;
+  padding-right: 12px;
 }
 
-#tempMax, #tempMax{
-font-size: 1.2em;
+#tempMax,
+#tempMax {
+  font-size: 1.2em;
 }
 
+.clear {
+  background-image: url("./Components/weatherimg/clear sky.jpg");
+}
 
+/* ======================================================================================================= */
 
-.clear{
-background-image: url('./Components/weatherimg/clear sky.jpg');
+@media all and (min-width: 768px) {
+  /* #Container_first{
+display: flex;
+flex-direction: column;
+} */
+}
+@media all and (min-width: 768px) {
+  #Container_first {
+    display: flex;
+    flex-direction: column;
+  }
 }

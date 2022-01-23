@@ -14,7 +14,7 @@ const Searchbtn = () => {
                 autoComplete="off"
                 type="text "
                 id="input"
-                placeholder="Search for a  City..."
+                placeholder="Search City..."
                 name="location"
                 style={{
                   background: "transparent",

@@ -12,7 +12,7 @@ const NextWeather = () => {
     <div>
       <div className="container mt-3" style={{ height: "50vh" }}>
         <div
-          className="d-flex pt-1 ps-3 rounded-3"
+          className="d-flex  pt-1 ps-3 rounded-3"
           style={{ background: "#1118", position: "sticky", zIndex: "100" }}
         >
           <h6 className="mt-1 " style={{ color: "black" }}>
@@ -29,8 +29,8 @@ const NextWeather = () => {
 
         <div className="row  " id="nextWeather">
           <div className="col-12  ">
-            {nextWeather.map((x) => {
-              const { wind, weather, main, visibility } = x;
+            {nextWeather.map((x, id) => {
+              const { wind, weather, main  } = x;
               const {
                 temp,
                 temp_min,
@@ -41,17 +41,22 @@ const NextWeather = () => {
               } = main;
               return (
                 <>
-                  <Accordion>
+                  <Accordion key={id}>
                     <Accordion.Item
-                      className="mt-1 "
+                      className=" "
                       eventKey="0"
                       style={{ background: "#1119" }}
                     >
-                      <Accordion.Header>
-                        <div className="d-flex  pt-1  flex-grow-1 ">
-                          <p className="flex-grow-1">
-                            
-                            <i className="far fa-clock me-3 mt-2 "></i>
+                      <Accordion.Header id="Accordian">
+                        <div className="d-flex  border  d-flex  align-items-center   justify-content-between  flex-grow-1 ">
+                          <p
+                            className="flex-grow-1"
+                            style={{ fontSize: "14px" }}
+                          >
+                            <i
+                              className="far fa-clock  mt-3  mx-2 "
+                              style={{ fontSize: "14px" }}
+                            ></i>
                             {new Date(x.dt * 1000).toLocaleString("en-US", {
                               day: "numeric",
                               month: "numeric",
@@ -62,22 +67,26 @@ const NextWeather = () => {
                               minute: "numeric",
                             })}
                           </p>
-                          <p className="flex-grow-1">
+                          <p
+                            className="flex-grow-1 mt-2 mx-1"
+                            style={{ fontSize: "14px" }}
+                          >
                             <i
                               className="fas fa-thermometer-three-quarters  me-2"
-                              style={{ fontSize: " 20px" }}
+                              style={{ fontSize: " 14px" }}
                             ></i>
                             {parseFloat(temp).toFixed(1)}&deg;
                           </p>
                           {weather.map((weatherState) => {
                             return (
-                              <p className="flex-grow-1">{weatherState.main}</p>
+                              <p
+                                className="flex-grow-1 mt-2"
+                                style={{ fontSize: "14px" }}
+                              >
+                                {weatherState.main}
+                              </p>
                             );
                           })}
-                          <p className=" justify-content-end px-3 pt-0">
-                            <i className="fas fa-wind mt-1 me-2"></i>
-                            {parseFloat(wind.speed).toFixed(1)}m/s
-                          </p>
                         </div>
                       </Accordion.Header>
                       <Accordion.Body>
@@ -95,9 +104,9 @@ const NextWeather = () => {
                             </span>
                           </p>
                           <p className="d-flex flex-column acoordion_font_size">
-                            Visiblity
+                            Wind
                             <span className="text-center acoordion_span_font_size">
-                              {visibility} mtr
+                              {parseFloat(wind.speed).toFixed(1)}m/s
                             </span>
                           </p>
 
@@ -115,7 +124,7 @@ const NextWeather = () => {
                           <p className="d-flex flex-column acoordion_font_size">
                             Max-Temp
                             <span className="text-center acoordion_span_font_size">
-                              {temp_max}
+                              {temp_max}&deg;
                             </span>
                           </p>
                           <p className="d-flex flex-column acoordion_font_size">
@@ -127,7 +136,7 @@ const NextWeather = () => {
                           <p className="d-flex flex-column acoordion_font_size">
                             Presure
                             <span className="text-center acoordion_span_font_size">
-                              {pressure}
+                              {pressure} hPa
                             </span>
                           </p>
                           <p className="d-flex flex-column acoordion_font_size">
