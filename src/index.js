@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from "./App"
-// import Design from "./Design"
-import Design from "./Components/data"
+import Design from "./Components/Error.jsx"
 ReactDOM.render(
   <React.StrictMode>
 <App/>

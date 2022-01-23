@@ -30,8 +30,13 @@ const MoreWeatherOptions = () => {
     cloud,
     visiblity,
     icon,
-
+    snow,
+    rain,
   } = useContext(context);
+
+
+
+
 
   const {
  
@@ -128,6 +133,8 @@ const MoreWeatherOptions = () => {
             style={{ height: "120px", width: "120px" }}
             alt={`${altLink}`}
           />
+
+
         </div>
         <div></div>
 
@@ -143,7 +150,7 @@ const MoreWeatherOptions = () => {
 
             <div className="d-flex ms-3 flex-grow-1">
               <p className="  d-flex flex-grow-1 " id="logo">
-                <span id="updown">&#8597;</span> Presure
+                <span id="updown">&#8597;</span> Pressure
               </p>
               <p>{pressure} hPa</p>
             </div>
@@ -166,7 +173,7 @@ const MoreWeatherOptions = () => {
               </p>
             </div>
             <div className="d-flex flex-grow-1">
-              <i class="fas fa-tint me-3 ms-1 mt-1"></i>
+              <i className ="fas fa-tint me-3 ms-1 mt-1"></i>
 
               <p className="  d-flex flex-grow-1 " id="logo">
                 Humedity
@@ -193,25 +200,27 @@ const MoreWeatherOptions = () => {
               </p>
 
               <p className="me-3" id="logo">
-                - %
+              {
+             rain  !== undefined  ||  null  ?      (Object.values(rain)[0]) : " -"  } mm
               </p>
             </div>
             <div className="d-flex flex-grow-1">
-              <i class="fa fa-eye me-3  mt-1"></i>
+              <i className="fa fa-eye me-3  mt-1"></i>
               <p className="  d-flex flex-grow-1 ms-1 " id="logo">
                 Visiblity
               </p>
-              <p className="me-3"> {visiblity} km </p>
+              <p className="me-3"> {visiblity /1000} km </p>
             </div>
             <div className="d-flex flex-grow-1">
               <p className=" mt-1  d-flex flex-grow-1 " id="logo">
                 <span className="me-2 " id="SeaLevelIcon">
                   <img src={SnowIcon} alt="Snow" style={{ height: "21px" }} />
                 </span>
-                Snow
+Snow               
               </p>
               <p className="me-3" id="logo">
-                hPa
+            {
+             snow  !== undefined  ||  null  ?      (Object.values(snow)[0]) : " -"  } mm
               </p>
             </div>
           </div>
