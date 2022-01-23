@@ -80,8 +80,8 @@ const MainComponent = () => {
     <>
       <div className="">
         <div className="container  my-3  " id=" main_Contianer ">
-          <div className="row  ">
-            <div className="col-5 mt-2 ">
+          <div className="row " style={ {background: '#1113' , borderRadius:' 10px' }}>
+            <div className="col-6  mt-2 "  > 
               <div className="d-flex  justify-content-center align-items-center">
                 <div className="  mt-4" id="Left_side">
                   <h5 className="text-center h3 ">
@@ -125,7 +125,7 @@ const MainComponent = () => {
               </div>
             </div>
 
-            <div className=" col-6  ms-3 d-flex flex-column justify-content-center align-items-center ">
+            <div className=" col-6   d-flex flex-column justify-content-center align-items-center ">
               <img
                 onChange={weatherIcons()}
                 src={`${IconLink}`}

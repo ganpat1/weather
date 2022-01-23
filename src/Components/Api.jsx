@@ -6,7 +6,6 @@ import Searchbtn from "./Searchbtn";
 import MoreWeatherOptions from "./MoreWeatherOptions";
 import NextWeather from "./NextWeather";
 import Error from "./Error";
-import Ndata from "./Ndata";
 
 export const context = createContext();
 
@@ -22,21 +21,20 @@ const Api = () => {
   const [nextWeather, setNextWeather] = useState([]);
   const [visiblity, setVisiblity] = useState([]);
   const [icon, setIcon] = useState([]);
-  
+
   const fetchApi = async (event) => {
-  const  apiKey =process.env.REACT_APP_MY_API_KEY;
+    const apiKey = process.env.REACT_APP_MY_API_KEY;
     event.preventDefault();
     const location = event.target.location.value;
     if (!location) {
       return <h1 className="text-center"> Plz Valid City Name !....</h1>;
     }
-    console.log(apiKey);    
     const request = await axios.get(
       `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=metric`
-      // `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=e8f7bdb53874cf59dff1f1ded89c234c&units=metric`
-    )
+    );
     const response = await request.data;
 
+    console.log(response);
     setCityName(response.city.name);
     setConutryName(response.city);
     setTempreture(response.list[0].main);
@@ -49,6 +47,10 @@ const Api = () => {
     setSnow(response.list[0].snow);
     setIcon(response.list[0].weather[0].icon);
   };
+
+
+
+
 
   return (
     <>
@@ -70,8 +72,10 @@ const Api = () => {
           }}
         >
           <Searchbtn />
+          {!cityName && <Error/>}
           {cityName && <MainComponent />}
-          {cityName && <MoreWeatherOptions />}
+          
+                    {cityName && <MoreWeatherOptions />}
           {cityName && <NextWeather />}
         </context.Provider>
       </div>

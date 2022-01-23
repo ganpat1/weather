@@ -115,15 +115,15 @@ const MoreWeatherOptions = () => {
   return (
     <>
       <div className="container">
-        <p className="p-1 " id="NextWeatherTitle">
+        <p className="p-1  col-12" id="NextWeatherTitle"  style={ {background: '#1113' , borderRadius:' 5px' }} >
           Weather Today In - {cityName}
         </p>
 
-        <div className="d-flex justify-content-lg-between px-5 pb-0">
+        <div className="d-flex justify-content-lg-between px-5 col-12 pb-0"  style={ {background: '#1113' , borderRadius:' 10px' }}>
           <div className="d-flex text-center flex-column">
             <span className="text-center">Feels-Like</span>
             <p className="p-0 m-0" style={{ fontSize: "4em" }}>
-              {feels_like}
+              {feels_like}&deg;
             </p>
           </div>
           <img
@@ -136,9 +136,8 @@ const MoreWeatherOptions = () => {
 
 
         </div>
-        <div></div>
 
-        <div className="row">
+        <div className="row mt-3"  style={ {background: '#1113' , borderRadius:' 10px' }}>
           <div className="col-4  border-end border-info  d-flex flex-column ">
             <div className="d-flex ms-3 mt-1  flex-grow-1">
               <i class="fas fa-wind mt-1 "></i>
